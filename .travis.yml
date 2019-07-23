@@ -1,5 +1,15 @@
+language : C++
+
+C++ : 
+  - 11
+  - 14
+  - 17
+
 dist: xenial
 
 script:
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
  
+notifications:
+  email:
+    - redorange_vib@mail.ru
